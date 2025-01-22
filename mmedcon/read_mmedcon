@@ -1,0 +1,30 @@
+# mMEDCON International
+
+mMEDCON International is a nonprofit organization providing hands-on experience for students interested in medical careers. The platform supports various educational features, including real-time AI-driven feedback, a collaborative environment, and access to extensive medical resources. This repository contains the source code, documentation, and all related materials necessary to understand, contribute to, and deploy the project.
+
+For more details on my project idea, you can visit the following link: https://www.mmedcon.com/en
+
+# Repository Structure
+
+The repository is organized as follows:
+
+Code Files for all mMEDCON features and the README file 
+
+
+# Usage
+1. Access the website using the following link: [https://www.mmedcon.com/?rc=test-site](https://www.mmedcon.com/?rc=test-site)
+2. If you are logging in as a student, use the following login credentials: Email: nb3733@nyu.edu Password: Password
+3. If you are logging in as a grader, use the following login credentials: Email: nadabeltagui@yahoo.com  Password: Password
+4. Hover over Vice and navigate to the Chatroom, MapDashboard Page, Review Student Complaints, Submission, Review AI Feedback, My Feedback or Submit Complaints.
+
+# Running Tests and Getting a Coverage Report
+1. create directory for running tests
+2. cd to the directory
+3. run the command npm init -y to initialize a node.js project
+4. run npm install --save-dev jest
+5. run vim package.json
+6. update package.json by updating "test":"jest"
+7. save the test.js file in the directory
+8. save the code.js in the directory
+9. run npm test
+10. run npm test -- --coverage for the coverage report.
