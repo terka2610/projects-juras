@@ -1,0 +1,135 @@
+# Breath Break
+
+## Introduction
+
+The **Breath Break** project addresses the increasing need for effective heart rate monitoring and stress relief among cardiac patients, particularly those with a history of cardiovascular complications or at high risk of heart attacks. This smart system is designed to assist bed-ridden patients in monitoring their heart rate, detecting potential heart attacks, providing stress relief through breathing exercises, and reminding patients to take their medication on time.
+
+---
+
+## Key Features
+
+1. **Heart Rate Monitoring**:
+   - Continuously monitors the patient's heart rate using a heart rate sensor.
+   - Detects significant deviations from normal heart rate levels (e.g., tachycardia or bradycardia).
+   - Activates alarms and sends email alerts to trusted contacts during potential heart attack scenarios.
+
+2. **Stress Relief Mechanism**:
+   - Includes breathing exercises combined with visual aids like nature pictures to help patients relax.
+   - Provides live feedback via screen color changes to reflect heart rate levels:
+     - **Red**: High stress (HR > 120 bpm).
+     - **Yellow**: Normal (60 bpm < HR ≤ 120 bpm).
+     - **Green**: Relaxed (HR ≤ 60 bpm).
+
+3. **Medication Reminder**:
+   - Allows patients to set alarms for medication intake.
+   - Sends email reminders at the designated times to ensure compliance with prescribed medication schedules.
+
+4. **Box Breathing Practice**:
+   - Guides users through calming box breathing exercises.
+   - Utilizes vibration and visual instructions to create a peaceful environment.
+
+---
+
+## Problem Definition and Objectives
+
+### Goals:
+- **Medication Reminders**: Ensure patients take medication on time via alarms and email notifications.
+- **Heart Attack Detection**: Continuously monitor heart rates and alert family members in emergencies.
+- **Stress Relief**: Provide accessible relaxation techniques to reduce stress levels and promote heart health.
+
+### Assumptions:
+- Device credentials (Wi-Fi, email) are pre-configured and hard-coded.
+- The device is in a stable Wi-Fi zone.
+- Emergency contact information is pre-set in the code.
+
+---
+
+## Project Components
+
+1. **User Interface**:
+   - A menu displayed on the M5Stack LCD screen with four main buttons: 
+     - **Alarm Timer**
+     - **Heart Attack**
+     - **Stress Relief**
+     - **Box Breath**
+
+2. **Heart Attack Detection Algorithm**:
+   - Reads heart rate data and calculates averages for every 15 readings.
+   - Detects heart attacks based on two consecutive abnormal averages.
+   - Alerts via screen vibration and sends an email notification.
+
+3. **Relaxation Algorithm**:
+   - Combines breathing exercises with color-coded feedback and nature imagery.
+   - Helps reduce stress levels by promoting controlled breathing patterns.
+
+4. **Alarm Functionality**:
+   - Users set alarms for medication reminders.
+   - Emails are sent at the specified times to ensure compliance.
+
+5. **Box Breathing Practice**:
+   - Guides users through breathing exercises with visual aids and vibrations.
+
+---
+
+## Implementation Steps
+
+1. **Hardware Requirements**:
+   - M5Stack Core2
+   - MAX30100 Pulse Oximeter
+   - Wi-Fi connectivity
+
+2. **Software Requirements**:
+   - Arduino IDE with relevant libraries (`M5Core2.h`, `WiFiMulti.h`, `ESP_Mail_Client.h`, `MAX30100_PulseOximeter.h`).
+
+3. **Setup**:
+   - Configure Wi-Fi credentials and email settings in the code.
+   - Upload the program to the M5Stack device.
+   - Connect the heart rate sensor and test functionality.
+
+4. **Usage**:
+   - **Menu Navigation**: Select options using the LCD touch screen.
+   - **Heart Rate Monitoring**: Observe real-time heart rate data and receive alerts for abnormalities.
+   - **Stress Relief**: Engage in guided breathing exercises with visual and vibration feedback.
+   - **Medication Reminder**: Set alarms to ensure timely medication intake.
+
+---
+
+## Results and Testing
+
+### Observations:
+1. **Heart Attack Detection**:
+   - Detected abnormal heart rate changes successfully in test cases.
+   - Triggered alarms and email notifications during simulated heart attack scenarios.
+
+2. **Stress Relief Algorithm**:
+   - Screen color transitions effectively reflected stress levels during exercises.
+   - Significant reductions in heart rate were observed in test subjects.
+
+3. **Medication Reminder**:
+   - Emails were sent accurately at the specified alarm times.
+
+### Limitations:
+- Heart rate sensor accuracy is limited.
+- Issues with SD file attachment and email functionality remain unresolved.
+- Speech synthesis functionality could not be implemented due to compatibility issues.
+
+---
+
+---
+
+## Demonstration
+
+- Watch the [project demonstration video](https://www.youtube.com/watch?v=VyyJoqSEm2I).
+
+## Full docuemntation
+https://docs.google.com/document/d/1QabvVRJgkFzntwz8zOJ75T3dDf1SGF2eJ7T0Z9V-waY/edit?tab=t.0
+
+---
+
+## Contact
+
+For further details, please write an email to tj2286@nyu.edu
+
+---
+
+Feel free to reach out for any questions or contributions!
