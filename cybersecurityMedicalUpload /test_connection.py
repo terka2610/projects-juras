@@ -12,10 +12,10 @@ try:
     # Test connection
     cur.execute("SELECT 1")
     result = cur.fetchone()
-    print(f"✅ Database connection successful: {result}")
+    print(f" Database connection successful: {result}")
     
 except Exception as e:
-    print(f"❌ Database connection failed: {e}")
+    print(f" Database connection failed: {e}")
     print(f"Error type: {type(e).__name__}")
     import traceback
     traceback.print_exc()
@@ -23,9 +23,9 @@ except Exception as e:
 try:
     print("\nTesting dicom_utils functions...")
     from dicom_utils import convert_to_dicom, anonymize_dicom, encrypt_file
-    print("✅ dicom_utils imports successful")
+    print("dicom_utils imports successful")
     
 except Exception as e:
-    print(f"❌ dicom_utils import failed: {e}")
+    print(f" dicom_utils import failed: {e}")
     import traceback
     traceback.print_exc()
